@@ -1,0 +1,4 @@
+1. buka program ini di comand line
+2. masuk pada directory file
+3. ketik "php unlimited_input.php"
+4. input sesuai kondisi (jika input angka maka akan infinity dan ketika selain angka program berhenti).

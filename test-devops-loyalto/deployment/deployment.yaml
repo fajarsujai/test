@@ -1,0 +1,69 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: golang-helloworld
+spec:
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 100%
+  selector:
+    matchLabels:
+      app: golang-helloworld
+  template:
+    metadata:
+      labels:
+        app: golang-helloworld
+    spec:
+      containers:
+      - name: golang-helloworld-img
+        image: fajarsujai/golang-helloworld
+        ports:
+          - name: http
+            containerPort: 8000
+        resources:
+            limits:
+              cpu: 690m
+              memory: 1200Mi
+            requests:
+              cpu: 200m
+              memory: 400Mi
+      terminationGracePeriodSeconds: 1
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: golang-helloworld
+spec:
+  type: NodePort
+  selector:
+    app: golang-helloworld
+  ports:
+    - protocol: TCP
+      nodePort: 8000
+      port: 8000
+      targetPort: http
+
+---
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: golang-helloworld-ingress
+  labels:
+    name: golang-helloworld-ingress
+spec:
+  rules:
+  - host: golang-helloworld.staging.local
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: golang-helloworld
+            port: 
+              number: 8000

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+
+    <title>Profile Data</title>
+<!--
+Reflux Template
+https://templatemo.com/tm-531-reflux
+-->
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/templatemo-style.css" />
+    <link rel="stylesheet" href="assets/css/owl.css" />
+    <link rel="stylesheet" href="assets/css/lightbox.css" />
+  </head>
+
+  <body>
+    <div id="page-wraper">
+      <!-- Sidebar Menu -->
+      <div class="responsive-nav">
+        <i class="fa fa-bars" id="menu-toggle"></i>
+        <div id="menu" class="menu">
+          <i class="fa fa-times" id="menu-close"></i>
+          <div class="container">
+            <div class="image">
+              <a href="https://storage.googleapis.com/project-demo-fajarsujai.appspot.com/IMG_RF_crop.jpg"><img src="https://storage.googleapis.com/project-demo-fajarsujai.appspot.com/IMG_RF_crop.jpg" alt="" /></a>
+            </div>
+            <div class="author-content">
+              <h4>Fajar Sujai Pratama</h4>
+              <span>Cloud Engineer</span>
+            </div>
+            <nav class="main-nav" role="navigation">
+              <ul class="main-menu">
+                <li><a href="#section1">About Me</a></li>
+                <li><a href="#section1">Google Cloud Platform</a></li>
+                <li><a href="#section3">Alibaba Cloud</a></li>
+                <li><a href="#section4">Amazon Web Storage</a></li>
+              </ul>
+            </nav>
+            <div class="copyright-text">
+              <p>Copyright 2019 Reflux Design</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="section about-me" data-section="section1">
+        <div class="container">
+          <div class="section-heading">
+            <h2>About Me</h2>
+            <div class="line-dec"></div>
+            <span
+              >Sudah 2 tahun bekerja profesional sebagai backend Developer, namun dalam beberapa bulan ini lagi senang dengan kultur devops. semoga di learning path google cloud platform dapat membantu menuju ke arah kultur devops.</span
+            >
+          </div>
+          <div class="left-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-image">
+                  <img src="https://storage.googleapis.com/project-demo-fajarsujai.appspot.com/gcp.jpg" alt="" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-text">
+                  <h4>Google Cloud Platform</h4>
+                  <p>
+                    Google Cloud Platform (GCP) adalah produk layanan komputasi cloud yang dimiliki oleh Google. GCP mencakup infrastruktur cloud publik dan G-Suite versi enterprise dari Android, Chrome, dan antarmuka pemrograman aplikasi untuk pembelajaran mesin dan layanan pemetaan perusahaan.
+                  </p> 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section about-me" data-section="section3">
+        <div class="container">
+          <div class="section-heading">
+          </div>
+          <div class="left-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-image">
+                  <img src="https://storage.googleapis.com/project-demo-fajarsujai.appspot.com/alicloud.png" alt="" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-text">
+                  <h4>Alibaba Cloud</h4>
+                  <p>
+                    Alibaba Cloud adalah suatu perusahaan yang menyediakan komputasi awan dan berbagai layanan yang dirancang untuk berbagai bisnis online serta ekosistem perdagangan elektronik. Operasi internasional Alibaba terdaftar di Singapura. Markas besarnya juga ada di negara tersebut.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section about-me" data-section="section4">
+        <div class="container">
+          <div class="section-heading">
+          
+          </div>
+          <div class="left-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-image">
+                  <img src="https://storage.googleapis.com/project-demo-fajarsujai.appspot.com/aws.png" alt="" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-text">
+                  <h4>Amazon Web Service</h4>
+                  <p>
+                    Amazon Web Services (AWS) adalah platform cloud paling komprehensif dan digunakan secara luas di dunia, menawarkan lebih dari 200 layanan unggulan yang lengkap dari pusat data secara global. Jutaan pelanggan—termasuk beberapa startup dengan pertumbuhan tercepat, perusahaan terbesar, dan lembaga pemerintah terkemuka—menggunakan AWS untuk memangkas biaya, menjadi lebih sigap, dan berinovasi lebih cepat.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+    </div>
+
+    <!-- Scripts -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script>
+      //according to loftblog tut
+      $(".main-menu li:first").addClass("active");
+
+      var showSection = function showSection(section, isAnimate) {
+        var direction = section.replace(/#/, ""),
+          reqSection = $(".section").filter(
+            '[data-section="' + direction + '"]'
+          ),
+          reqSectionPos = reqSection.offset().top - 0;
+
+        if (isAnimate) {
+          $("body, html").animate(
+            {
+              scrollTop: reqSectionPos
+            },
+            800
+          );
+        } else {
+          $("body, html").scrollTop(reqSectionPos);
+        }
+      };
+
+      var checkSection = function checkSection() {
+        $(".section").each(function() {
+          var $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+          if (topEdge < wScroll && bottomEdge > wScroll) {
+            var currentId = $this.data("section"),
+              reqLink = $("a").filter("[href*=\\#" + currentId + "]");
+            reqLink
+              .closest("li")
+              .addClass("active")
+              .siblings()
+              .removeClass("active");
+          }
+        });
+      };
+
+      $(".main-menu").on("click", "a", function(e) {
+        e.preventDefault();
+        showSection($(this).attr("href"), true);
+      });
+
+      $(window).scroll(function() {
+        checkSection();
+      });
+    </script>
+  </body>
+</html>
